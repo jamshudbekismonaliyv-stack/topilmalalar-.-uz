@@ -1,0 +1,243 @@
+
+:root {
+  --navy: #081b33;
+  --blue: #17466b;
+  --gold: #e4c47b;
+  --white: #ffffff;
+  --muted: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  color: #14243a;
+}
+
+header {
+  background: var(--navy);
+  color: white;
+  padding: 22px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: var(--gold);
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.hero {
+  background: linear-gradient(125deg, var(--navy), var(--blue));
+  color: white;
+  padding: 75px 7%;
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 6vw, 58px);
+  max-width: 700px;
+  margin: 20px 0;
+}
+
+.hero p {
+  color: #d7e2ee;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btn,
+button {
+  display: inline-block;
+  border: 0;
+  border-radius: 9px;
+  padding: 14px 20px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+button:hover {
+  filter: brightness(.94);
+}
+
+.btn.light {
+  background: white;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 38px 20px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.muted {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.searchbox {
+  display: flex;
+  gap: 12px;
+  margin: 22px 0;
+  flex-wrap: wrap;
+}
+
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #d3dce8;
+  border-radius: 9px;
+  background: white;
+  font: inherit;
+}
+
+.searchbox input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.searchbox select {
+  width: auto;
+  min-width: 190px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card,
+.form-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 22px;
+  box-shadow: 0 5px 20px #0a25400a;
+}
+
+.emoji {
+  font-size: 32px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e1f5e9;
+  color: #17663a;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tag.lost {
+  background: #fff0d9;
+  color: #885414;
+}
+
+.add-section {
+  margin-top: 55px;
+}
+
+.form-card {
+  display: grid;
+  gap: 16px;
+  max-width: 600px;
+}
+
+.form-card label {
+  display: grid;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 32px 7%;
+  text-align: center;
+  background: var(--navy);
+  color: #d7e2ee;
+}
+
+footer strong {
+  color: var(--gold);
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 20px;
+  }
+
+  .hero {
+    padding: 50px 22px;
+  }
+
+  nav {
+    gap: 13px;
+  }
+
+  .searchbox input,
+  .searchbox select {
+    width: 100%;
+  }
+}

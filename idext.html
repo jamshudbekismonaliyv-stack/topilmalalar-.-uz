@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOPILMALAR</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">✦ TOPILMALAR</div>
+    <nav>
+      <a href="#bosh">Bosh sahifa</a>
+      <a href="#elonlar">E’lonlar</a>
+      <a href="#qoshish">E’lon berish</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="bosh">
+    <span class="eyebrow">ISHONCH • HALOLLIK • HAMJIHATLIK</span>
+    <h1>Har bir topilmaning egasi bor.</h1>
+    <p>Yo‘qolgan buyumlarni qidiring, topilgan narsalar haqida e’lon bering va ularni egalariga qaytarishga yordam bering.</p>
+    <div class="actions">
+      <a class="btn" href="#elonlar">Buyum qidirish</a>
+      <a class="btn light" href="#qoshish">＋ E’lon berish</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="elonlar">
+      <h2>Buyumlarni qidirish</h2>
+      <p class="muted">Buyum nomi yoki joylashuvi bo‘yicha qidiring.</p>
+      <div class="searchbox">
+        <input id="qidiruv" placeholder="Telefon, hamyon, Toshkent...">
+        <select id="tur">
+          <option value="Barchasi">Barcha e’lonlar</option>
+          <option value="Topildi">Topilgan buyumlar</option>
+          <option value="Yo‘qoldi">Yo‘qolgan buyumlar</option>
+        </select>
+      </div>
+      <div class="grid" id="royxat"></div>
+      <p id="boshqa" class="muted hidden">Mos e’lon topilmadi.</p>
+    </section>
+
+    <section id="qoshish" class="add-section">
+      <h2>Yangi e’lon joylashtirish</h2>
+      <p class="muted">Buyum haqida ma’lumot kiriting.</p>
+      <form id="forma" class="form-card">
+        <label>Buyum nomi
+          <input id="nom" required maxlength="100" placeholder="Masalan: qora hamyon">
+        </label>
+        <label>E’lon turi
+          <select id="elonTuri">
+            <option>Topildi</option>
+            <option>Yo‘qoldi</option>
+          </select>
+        </label>
+        <label>Shahar yoki joy
+          <input id="joy" required maxlength="120" placeholder="Masalan: Toshkent shahri">
+        </label>
+        <label>Qo‘shimcha ma’lumot
+          <input id="izoh" maxlength="250" placeholder="Rangi va belgilari">
+        </label>
+        <button type="submit">E’lonni qo‘shish</button>
+        <p id="xabar" role="status" class="muted"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <strong>TOPILMALAR</strong>
+    <p>Yo‘qolganini toping. Topilganini qaytaring.</p>
+    <small>Namoyish prototipi</small>
+  </footer>
+</body>
+</html>
